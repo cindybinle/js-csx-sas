@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="index, follow"/>
+    <title>JSON Editor Online - view, edit and format JSON online</title>
+    <meta name="description" content="JSON Editor Online - view, edit and format JSON online">
+    <meta name="author" content="Thuan Le">
+    <meta name="keywords" content="json, editor, formatter, online, format, parser, json editor, json editor online, online json editor, javascript, javascript object notation, tools, tool, json tools, treeview, open source, free, json parser, json parser online, json formatter, json formatter online, online json formatter, online json parser, format json online, json editor of thuan le, thuan le, thuanitdn, thuanitdn developer, thuan le developer">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<style>
+
+    body, html {
+        width: 100%;
+        height: 100%;
+        min-height: 700px;
+        background: #041e2b;
+        /* Old browsers */
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #041e2b 0%, #407886 41%, #d4dbdb 69%, black 69%, black 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #041e2b 0%, #407886 41%, #d4dbdb 69%, black 69%, black 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#041e2b', endColorstr='#000000',GradientType=0 );
+        /* IE6-9 */
+        font-family: 'Freckle Face', cursive;
+        overflow-x: hidden;
+    }
+
+    .background_app{
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+    }
+
+    #foreground {
+        height: 600px;
+        position: absolute;
+        margin-top: -200px;
+        overflow-y: hidden;
+    }
+
+    h1 {
+        position: absolute;
+        top: 550px;
+        width: 100%;
+        text-align: center;
+        font-size: 45px;
+        color: orange;
+        white-space: pre;
+        margin-left: 20px;
+    }
+
+    span {
+        letterspacing: 200px;
+    }
+
+    .moon {
+        left: 25%;
+        position: absolute;
+        top: 100px;
+    }
+
+    .horseman {
+        width: 184px;
+        height: 123px;
+        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/horse-hallow5.svg");
+        -webkit-animation: horsemove 0.7s steps(15) infinite;
+        animation: horsemove 0.7s steps(15) infinite;
+        position: absolute;
+        left: 50%;
+        margin-left: -100px;
+        top: 300px;
+    }
+
+    .pumpkin {
+        position: absolute;
+        left: 50%;
+        margin-left: -100px;
+        top: 300px;
+    }
+
+    .ground {
+        width: 151%;
+        height: 697px;
+        position: absolute;
+        background-size: 800px 716px;
+        left: 0;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+    }
+
+    .front {
+        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowfront4.svg") repeat-x;
+        background-size: 1000px 871px;
+        top: -100px;
+        -webkit-animation: bk 20s -5s linear infinite;
+        animation: bk 20s -5s linear infinite;
+    }
+
+    .frontmid {
+        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowmidfront2.svg") repeat-x;
+        background-size: 1000px 871px;
+        top: -100px;
+        -webkit-animation: bk 50s -5s linear infinite;
+        animation: bk 50s -5s linear infinite;
+    }
+
+    .mid {
+        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowmid2.svg") repeat-x;
+        background-size: 1000px 871px;
+        top: -100px;
+        -webkit-animation: bk 100s -5s linear infinite;
+        animation: bk 100s -5s linear infinite;
+    }
+
+    .back {
+        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowback2.svg") repeat-x;
+        background-size: 1000px 871px;
+        top: -100px;
+        -webkit-animation: bk 100s -5s linear infinite;
+        animation: bk 100s -5s linear infinite;
+    }
+
+    @-webkit-keyframes horsemove {
+        100% {
+            background-position: 0 -1848px;
+        }
+    }
+
+    @keyframes horsemove {
+        100% {
+            background-position: 0 -1848px;
+        }
+    }
+    @-webkit-keyframes bk {
+        100% {
+            background-position: -200% 0;
+        }
+    }
+    @keyframes bk {
+        100% {
+            background-position: -200% 0;
+        }
+    }
+
+    .container-app{
+        width: 95%;
+        height:95%;
+        position: absolute;
+        top:2.5%;
+        left:2.5%;
+        z-index: 0;
+    }
+    .container-app .container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .container-app .container header{
+        height: 40px;
+        width: 100%;
+        border-bottom: 2px solid #fff;
+    }
+
+    .container-app .container .container-bg{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.7;
+        z-index: -1;
+        border-bottom-right-radius:30px;
+    }
+
+    button{
+        border: none;
+        font-weight: 600;
+        border-radius: 5px;
+        font-size: 15px;
+        padding: 3px;
+        color: #fff;
+        cursor: pointer;
+
+    }
+    button b{
+        margin-right:5px;
+        font-weight: 800;
+    }
+    header button{
+        margin: 7px 0 0 10px;
+    }
+
+    .btn-upload{
+        background: #FF851B;
+    }
+
+    .btn-download{
+        background: #2ECC40;
+    }
+
+    .btn-save{
+        background: #0074D9;
+    }
+
+</style>
+<body>
+<div class="background_app">
+    <svg class="moon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" width="100" height="100">
+        <circle r="30" fill="#fff" cx="70" cy="70"></circle>
+    </svg>
+
+    <div class="back ground"></div>
+    <div class="mid ground"></div>
+    <div class="frontmid ground"></div>
+    <div class="front ground"></div>
+</div>
+
+<div class="container-app">
+    <div class="container">
+        <div class="container-bg"></div>
+        <header>
+            <button class="btn-upload"><b class="ion-android-upload"></b>Upload File</button>
+            <button class="btn-download"><b class="ion-android-download"></b>Download</button>
+            <button class="btn-save"><b class="ion-android-bookmark"></b>Save</button>
+        </header>
+        <section class="content">
+
+        </section>
+    </div>
+</div>
+
+<script>function sceneOne() {
+  var tl = new TimelineMax();
+
+  tl.add("begin", "+=1");
+  tl.fromTo(".pumpkin", 2, {
+    scale: 0,
+    x: 0,
+    y: 0,
+    rotation: 180
+  }, {
+    scale: 1,
+    bezier: {
+      type: "soft",
+      values: [{
+        x: 400,
+        y: 175
+      }, {
+        x: 30,
+        y: 250
+      }],
+      autoRotate: false
+    },
+    rotation: 0,
+    ease: Circ.easeInOut
+  }, "begin+=1");
+  tl.to("#face, #back-area", 1, {
+    opacity: 0.5,
+    yoyo: true,
+    repeatDelay: 0.65,
+    repeat: -1,
+    ease: RoughEase.ease.config({ template:  Power0.easeNone, strength: 1, points: 20, taper: "none", randomize:  true, clamp: false})
+  }, "begin+=3");
+  tl.from("h1", 2, {
+    opacity: 0,
+    ease: RoughEase.ease.config({ template:  Power0.easeNone, strength: 1, points: 20, taper: "none", randomize:  true, clamp: false})
+  }, "begin+=3");
+  tl.from("h1", 1, {
+    rotationX: 180,
+    ease: Sine.easeOut
+  }, "begin+=3");
+
+  return tl;
+}
+
+//add it all to master timeline
+var master = new TimelineMax();
+master.add(sceneOne(), "first");
+//# sourceURL=pen.js
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-route.min.js"></script>
+</body>
+</html>
