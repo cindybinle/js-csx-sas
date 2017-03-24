@@ -1,299 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="jsoneditor" ng-cloak>
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="robots" content="index, follow"/>
     <title>JSON Editor Online - view, edit and format JSON online</title>
     <meta name="description" content="JSON Editor Online - view, edit and format JSON online">
     <meta name="author" content="Thuan Le">
-    <meta name="keywords" content="json, editor, formatter, online, format, parser, json editor, json editor online, online json editor, javascript, javascript object notation, tools, tool, json tools, treeview, open source, free, json parser, json parser online, json formatter, json formatter online, online json formatter, online json parser, format json online, json editor of thuan le, thuan le, thuanitdn, thuanitdn developer, thuan le developer">
+    <meta name="keywords"
+          content="json, editor, formatter, online, format, parser, json editor, json editor online, online json editor, javascript, javascript object notation, tools, tool, json tools, treeview, open source, free, json parser, json parser online, json formatter, json formatter online, online json formatter, online json parser, format json online, json editor of thuan le, thuan le, thuanitdn, thuanitdn developer, thuan le developer">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/5.5.11/jsoneditor.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/angular-resizable/1.2.0/angular-resizable.min.css">
 </head>
 <style>
 
     body, html {
-        width: 100%;
-        height: 100%;
-        min-height: 700px;
-        background: #041e2b;
-        /* Old browsers */
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #041e2b 0%, #407886 41%, #d4dbdb 69%, black 69%, black 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #041e2b 0%, #407886 41%, #d4dbdb 69%, black 69%, black 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#041e2b', endColorstr='#000000',GradientType=0 );
-        /* IE6-9 */
-        font-family: 'Freckle Face', cursive;
-        overflow-x: hidden;
+        background-image: linear-gradient(to left, #ED4264, #FFEDBC);
     }
 
-    .background_app{
-        position: fixed;
-        top:0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: black;
+    nav h3 {
+        color: #ed4867;
+        font-weight: 200;
+        margin-top: -12px;
     }
 
-    #foreground {
-        height: 600px;
+    .container-app {
+        width: calc(100% - 40px);
+        height: calc(100% - 60px);
         position: absolute;
-        margin-top: -200px;
-        overflow-y: hidden;
-    }
-
-    h1 {
-        position: absolute;
-        top: 550px;
-        width: 100%;
-        text-align: center;
-        font-size: 45px;
-        color: orange;
-        white-space: pre;
-        margin-left: 20px;
-    }
-
-    span {
-        letterspacing: 200px;
-    }
-
-    .moon {
-        left: 25%;
-        position: absolute;
-        top: 100px;
-    }
-
-    .horseman {
-        width: 184px;
-        height: 123px;
-        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/horse-hallow5.svg");
-        -webkit-animation: horsemove 0.7s steps(15) infinite;
-        animation: horsemove 0.7s steps(15) infinite;
-        position: absolute;
-        left: 50%;
-        margin-left: -100px;
-        top: 300px;
-    }
-
-    .pumpkin {
-        position: absolute;
-        left: 50%;
-        margin-left: -100px;
-        top: 300px;
-    }
-
-    .ground {
-        width: 151%;
-        height: 697px;
-        position: absolute;
-        background-size: 800px 716px;
-        left: 0;
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -webkit-perspective: 1000px;
-        perspective: 1000px;
-    }
-
-    .front {
-        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowfront4.svg") repeat-x;
-        background-size: 1000px 871px;
-        top: -100px;
-        -webkit-animation: bk 20s -5s linear infinite;
-        animation: bk 20s -5s linear infinite;
-    }
-
-    .frontmid {
-        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowmidfront2.svg") repeat-x;
-        background-size: 1000px 871px;
-        top: -100px;
-        -webkit-animation: bk 50s -5s linear infinite;
-        animation: bk 50s -5s linear infinite;
-    }
-
-    .mid {
-        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowmid2.svg") repeat-x;
-        background-size: 1000px 871px;
-        top: -100px;
-        -webkit-animation: bk 100s -5s linear infinite;
-        animation: bk 100s -5s linear infinite;
-    }
-
-    .back {
-        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowback2.svg") repeat-x;
-        background-size: 1000px 871px;
-        top: -100px;
-        -webkit-animation: bk 100s -5s linear infinite;
-        animation: bk 100s -5s linear infinite;
-    }
-
-    @-webkit-keyframes horsemove {
-        100% {
-            background-position: 0 -1848px;
-        }
-    }
-
-    @keyframes horsemove {
-        100% {
-            background-position: 0 -1848px;
-        }
-    }
-    @-webkit-keyframes bk {
-        100% {
-            background-position: -200% 0;
-        }
-    }
-    @keyframes bk {
-        100% {
-            background-position: -200% 0;
-        }
-    }
-
-    .container-app{
-        width: 95%;
-        height:95%;
-        position: absolute;
-        top:2.5%;
-        left:2.5%;
+        top: 50px;
+        left: 20px;
         z-index: 0;
     }
-    .container-app .container{
+
+    .container-app .container {
         position: relative;
         width: 100%;
         height: 100%;
         z-index: 1;
     }
 
-    .container-app .container header{
+    .container-app .container header {
         height: 40px;
         width: 100%;
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid #ccc;
     }
 
-    .container-app .container .container-bg{
+    .container-app .container .container-bg {
         position: absolute;
-        top:0;
+        top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: black;
-        opacity: 0.7;
+        background: #fff;
         z-index: -1;
-        border-bottom-right-radius:30px;
+        border-bottom-right-radius: 30px;
+        border: 1px solid #ccc;
     }
 
-    button{
-        border: none;
+    .container-app .content {
+        position: relative;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        /*justify-content: space-around;*/
+        -ms-flex-line-pack: distribute;
+        /*align-content: space-around;*/
+    }
+
+    .container-app .content .form-editor {
+        min-width: 35%;
+    }
+
+    .container-app .content .form-tree {
+        margin-left: 16px;
+        width: calc(65% - 16px);
+    }
+
+    .container-app .content .resizable {
+        /*flex: 0 0 100%;*/
+    }
+
+    button {
+        border: 1px solid #fff;
         font-weight: 600;
         border-radius: 5px;
         font-size: 15px;
         padding: 3px;
         color: #fff;
         cursor: pointer;
+        background: white;
 
     }
-    button b{
-        margin-right:5px;
+
+    button b {
+        margin-right: 5px;
         font-weight: 800;
     }
-    header button{
+
+    header button {
         margin: 7px 0 0 10px;
     }
 
-    .btn-upload{
-        background: #FF851B;
+    .btn-upload {
+        border-color: #FF851B;
+        color: #FF851B;
     }
 
-    .btn-download{
-        background: #2ECC40;
+    .btn-download {
+        border-color: #2ECC40;
+        color: #2ECC40;
     }
 
-    .btn-save{
-        background: #0074D9;
+    .btn-save {
+        border-color: #0074D9;
+        color: #0074D9;
     }
 
+    .jsoneditor .jsoneditor-menu {
+        background: #ed4867;
+    }
+
+    .jsoneditor .jsoneditor-menu .jsoneditor-poweredBy {
+        display: none;
+    }
+
+    div.jsoneditor {
+        border-color: #ed4867;
+    }
+
+    /* css upload*/
+    .custom-file-input {
+        margin-left: 10px;
+        color: transparent;
+    }
+
+    .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+
+    .custom-file-input::before {
+        content: 'Import json file';
+        color: #FF851B;
+        display: inline-block;
+        border: 1px solid #FF851B;
+        border-radius: 3px;
+        padding: 5px 8px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 700;
+        font-size: 10pt;
+    }
+
+    .custom-file-input:hover::before {
+        border-color: black;
+    }
+
+    .custom-file-input:active {
+        outline: 0;
+    }
+
+    .custom-file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+
+    body {
+        padding: 20px;
+    }
+
+    /*css up;pad*/
+
+    footer {
+        text-align: center;
+        font-weight: 200;
+        font-size: 13px;
+        height: 30px;
+        line-height: 30px;
+        color: #ed4867;
+    }
+
+    footer a {
+        color: #ed4867;
+        text-decoration: none;
+    }
+
+    .alert-error {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        padding: 10px;
+        height: 30px;
+        line-height: 30px;
+        background: #fcdae0;
+        color: #ed4867;
+        border: 2px solid #ed4867;
+        z-index: 9999;
+        border-radius: 7px;
+        box-shadow: 3px 4px 5px #987878;
+        font-weight: 600;
+    }
+
+    .alert-success {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        padding: 10px;
+        height: 30px;
+        line-height: 30px;
+        background: #d7f5f5;
+        color: #3D9970;
+        border: 2px solid #3D9970;
+        z-index: 9999;
+        border-radius: 7px;
+        font-weight: 600;
+        box-shadow: 3px 4px 5px #987878;
+    }
+
+    .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .fadeIn {
+        animation-name: fadeIn;
+    }
 </style>
-<body>
-<div class="background_app">
-    <svg class="moon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" width="100" height="100">
-        <circle r="30" fill="#fff" cx="70" cy="70"></circle>
-    </svg>
-
-    <div class="back ground"></div>
-    <div class="mid ground"></div>
-    <div class="frontmid ground"></div>
-    <div class="front ground"></div>
-</div>
-
+<body ng-controller="controller">
+<nav><h3>JSON EDITOR ONLINE</h3></nav>
 <div class="container-app">
     <div class="container">
         <div class="container-bg"></div>
         <header>
-            <button class="btn-upload"><b class="ion-android-upload"></b>Upload File</button>
-            <button class="btn-download"><b class="ion-android-download"></b>Download</button>
+            <input class="custom-file-input" type="file" fileread="obj.file" accept=".json"/>
+            <a ng-href="{{ obj.fileDownload }}" download="file.txt">
+                <button class="btn-download"><b class="ion-android-download"></b>Download</button>
+            </a>
             <button class="btn-save"><b class="ion-android-bookmark"></b>Save</button>
         </header>
         <section class="content">
-
+            <div class="form-editor" resizable r-directions="['right']" r-flex="true">
+                <div ng-jsoneditor ng-model="obj.data" options="obj.options"
+                     ng-style="{height: heightEditor+ 'px'}"></div>
+            </div>
+            <div class="form-tree">
+                <div ng-jsoneditor ng-model="obj.data" options="obj2.options"
+                     ng-style="{height: heightEditor+ 'px'}"></div>
+            </div>
         </section>
+        <footer><a href="http://thuanitdn.com" target="_blank">Created By Thuan Le</a></footer>
     </div>
 </div>
-
-<script>function sceneOne() {
-  var tl = new TimelineMax();
-
-  tl.add("begin", "+=1");
-  tl.fromTo(".pumpkin", 2, {
-    scale: 0,
-    x: 0,
-    y: 0,
-    rotation: 180
-  }, {
-    scale: 1,
-    bezier: {
-      type: "soft",
-      values: [{
-        x: 400,
-        y: 175
-      }, {
-        x: 30,
-        y: 250
-      }],
-      autoRotate: false
-    },
-    rotation: 0,
-    ease: Circ.easeInOut
-  }, "begin+=1");
-  tl.to("#face, #back-area", 1, {
-    opacity: 0.5,
-    yoyo: true,
-    repeatDelay: 0.65,
-    repeat: -1,
-    ease: RoughEase.ease.config({ template:  Power0.easeNone, strength: 1, points: 20, taper: "none", randomize:  true, clamp: false})
-  }, "begin+=3");
-  tl.from("h1", 2, {
-    opacity: 0,
-    ease: RoughEase.ease.config({ template:  Power0.easeNone, strength: 1, points: 20, taper: "none", randomize:  true, clamp: false})
-  }, "begin+=3");
-  tl.from("h1", 1, {
-    rotationX: 180,
-    ease: Sine.easeOut
-  }, "begin+=3");
-
-  return tl;
-}
-
-//add it all to master timeline
-var master = new TimelineMax();
-master.add(sceneOne(), "first");
-//# sourceURL=pen.js
-</script>
+<div class="alert-error animated fadeIn" ng-show="alert.errorDisplay">{{alert.errorText}}</div>
+<div class="alert-success animated fadeIn" ng-show="alert.successDisplay">{{alert.successText}}</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-route.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/5.5.11/jsoneditor.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resizable/1.2.0/angular-resizable.min.js"></script>
+<script src="bower_components/ng-jsoneditor/ng-jsoneditor.js"></script>
+<script>
+  var json = {
+    "Array": [1, 2, 3],
+    "Boolean": true,
+    "Null": null,
+    "Number": 123,
+    "Object": {"a": "b", "c": "d"},
+    "String": "Hello World"
+  };
+  var Module = angular.module("jsoneditor", ['ng.jsoneditor', 'angularResizable']);
+
+  Module.config(['$compileProvider', function ($compileProvider) {
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(|blob|):/);
+  }]);
+
+
+  Module.controller('controller', ['$scope','$timeout', function ($scope, $timeout) {
+    $scope.obj = {data: json, options: {mode: 'code'}, file: null, fileDownload: null};
+    $scope.obj2 = {data: json, options: {mode: 'tree'}};
+    $scope.alert = {errorDisplay: false, errorText: '',successDisplay: false, successText: ''};
+    $scope.heightEditor = window.innerHeight - 140;
+
+    $scope.$watch('obj.file', function (newVal) {
+      if (newVal && isJsonString(newVal)) {
+        $scope.obj.data = JSON.parse(newVal);
+        $scope.alert.successDisplay=true;
+        $scope.alert.successText="Import file success!";
+      }
+      else if(!isJsonString(newVal)){
+          $scope.alert.errorDisplay=true;
+          $scope.alert.errorText="Format json file wrong, please choose other file!";
+      }
+    });
+
+    $scope.$watch('alert.errorDisplay', function (newVal) {
+      if (newVal) {
+        $timeout(function(){
+            $scope.alert = {errorDisplay: false, errorText: '',successDisplay: false, successText: ''};
+          },3000);
+      }
+    });
+
+    $scope.$watch('alert.successDisplay', function (newVal) {
+      if (newVal) {
+        $timeout(function(){
+          $scope.alert = {errorDisplay: false, errorText: '',successDisplay: false, successText: ''};
+        },3000);
+      }
+    });
+  }]);
+
+  //    directive
+
+  Module.directive("fileread", [function () {
+    return {
+      scope: {
+        fileread: "="
+      },
+      link: function (scope, element, attributes) {
+        element.bind("change", function (changeEvent) {
+          var reader = new FileReader();
+          reader.onload = function (loadEvent) {
+            scope.$apply(function () {
+              scope.fileread = loadEvent.target.result;
+            });
+          }
+          reader.readAsText(changeEvent.target.files[0]);
+        });
+      }
+    }
+  }]);
+
+  function isJsonString(str) {
+    try {
+      JSON.parse(str);
+    } catch (e) {
+      return false;
+    }
+    return true;
+  }
+</script>
 </body>
 </html>
