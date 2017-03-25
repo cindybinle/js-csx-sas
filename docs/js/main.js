@@ -135,6 +135,9 @@ Module.controller('controller', ['$scope', '$timeout', '$window', function ($sco
   $scope.obj2 = {data: json, options: {mode: 'tree'}};
   $scope.alert = {errorDisplay: false, errorText: '', successDisplay: false, successText: ''};
   $scope.heightEditor = window.innerHeight - 115;
+  if(window.innerWidth < 769){
+    $scope.heightEditor = window.innerHeight/2 - 53;
+  }
   $scope.toggleWindowBookmark = false;
   $scope.getListSaved = getDataLocalStorage().list || [];
   $scope.chooseBookmark = -1;
