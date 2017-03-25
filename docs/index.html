@@ -125,6 +125,11 @@
         color: #0074D9;
     }
 
+    .btn-list-save {
+        border-color: #001f3f;
+        color: #001f3f;
+    }
+
     .jsoneditor .jsoneditor-menu {
         background: #ed4867;
     }
@@ -184,9 +189,9 @@
     footer {
         text-align: center;
         font-weight: 200;
-        font-size: 13px;
-        height: 30px;
-        line-height: 30px;
+        font-size: 12px;
+        height: 15px;
+        line-height: 15px;
         color: #ed4867;
     }
 
@@ -245,6 +250,62 @@
     .fadeIn {
         animation-name: fadeIn;
     }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translate3d(100%, 0, 0);
+        }
+
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    .fadeInRight {
+        animation-name: fadeInRight;
+    }
+
+    #window-bookmark {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        background: white;
+        box-shadow: -10px 0px 10px 1px #fffafa;
+    }
+
+    #window-bookmark .window-bookmark-container {
+        position: relative;
+    }
+
+    #window-bookmark .window-bookmark-container .close-button {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        color: #ed4867;
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    #window-bookmark .window-bookmark-container ul {
+        overflow: auto;
+        list-style-type: decimal;
+    }
+
+    #window-bookmark .window-bookmark-container ul li {
+        padding: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+    }
+
+    #window-bookmark .window-bookmark-container ul li:hover {
+        color: #ed4867;
+    }
 </style>
 <body ng-controller="controller">
 <nav><h3>JSON EDITOR ONLINE</h3></nav>
@@ -253,10 +314,12 @@
         <div class="container-bg"></div>
         <header>
             <input class="custom-file-input" type="file" fileread="obj.file" accept=".json"/>
-            <a ng-href="{{ obj.fileDownload }}" download="file.txt">
+            <a ng-href="{{ obj.fileDownload }}" download="{{ obj.fileName }}">
                 <button class="btn-download"><b class="ion-android-download"></b>Download</button>
             </a>
-            <button class="btn-save"><b class="ion-android-bookmark"></b>Save</button>
+            <button class="btn-save" ng-click="onClickSave()"><b class="ion-android-bookmark"></b>Save</button>
+            <button class="btn-list-save" ng-click="onClickListSave()"><b class="ion-android-list"></b>List Saved
+            </button>
         </header>
         <section class="content">
             <div class="form-editor" resizable r-directions="['right']" r-flex="true">
@@ -273,11 +336,26 @@
 </div>
 <div class="alert-error animated fadeIn" ng-show="alert.errorDisplay">{{alert.errorText}}</div>
 <div class="alert-success animated fadeIn" ng-show="alert.successDisplay">{{alert.successText}}</div>
+<div id="window-bookmark" class="animated fadeInRight" ng-show="toggleWindowBookmark">
+    <div class="window-bookmark-container">
+        <span class="ion-android-close close-button" ng-click="onClickListCloseSave()"></span>
+        <h3>List saved</h3>
+        <br/>
+        <ul>
+            <li ng-repeat="data in getListSaved track by $index " ng-click="loadData(data.data, $index)">
+                <span ng-show="$index == chooseBookmark" style="color: #ed4867" class="ion-android-done"></span>
+                <span ng-show="$index != chooseBookmark">{{$index+1}}</span>
+                {{". "+formatTime(data.date)+" | "+ getString(data.data) }}
+            </li>
+        </ul>
+    </div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-route.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/5.5.11/jsoneditor.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resizable/1.2.0/angular-resizable.min.js"></script>
 <script src="bower_components/ng-jsoneditor/ng-jsoneditor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script>
   var json = {
     "Array": [1, 2, 3],
@@ -294,39 +372,106 @@
   }]);
 
 
-  Module.controller('controller', ['$scope','$timeout', function ($scope, $timeout) {
-    $scope.obj = {data: json, options: {mode: 'code'}, file: null, fileDownload: null};
+  Module.controller('controller', ['$scope', '$timeout', '$window', function ($scope, $timeout, $window) {
+    var today = new Date();
+    $scope.obj = {
+      data: json,
+      options: {mode: 'code'},
+      file: null,
+      fileDownload: null,
+      fileName: today.getDate() + "_" + today.getMonth() + "_" + today.getFullYear() + "_" + today.getHours() + "_" + today.getMinutes() + '.json'
+    };
     $scope.obj2 = {data: json, options: {mode: 'tree'}};
-    $scope.alert = {errorDisplay: false, errorText: '',successDisplay: false, successText: ''};
-    $scope.heightEditor = window.innerHeight - 140;
-
+    $scope.alert = {errorDisplay: false, errorText: '', successDisplay: false, successText: ''};
+    $scope.heightEditor = window.innerHeight - 115;
+    $scope.toggleWindowBookmark = false;
+    $scope.getListSaved = getDataLocalStorage().list || [];
+    $scope.chooseBookmark = -1;
     $scope.$watch('obj.file', function (newVal) {
       if (newVal && isJsonString(newVal)) {
         $scope.obj.data = JSON.parse(newVal);
-        $scope.alert.successDisplay=true;
-        $scope.alert.successText="Import file success!";
+        $scope.alert.successDisplay = true;
+        $scope.alert.successText = "Import file success!";
       }
-      else if(!isJsonString(newVal)){
-          $scope.alert.errorDisplay=true;
-          $scope.alert.errorText="Format json file wrong, please choose other file!";
+      else if (!isJsonString(newVal)) {
+        $scope.alert.errorDisplay = true;
+        $scope.alert.errorText = "Format json file wrong, please choose other file!";
       }
     });
 
     $scope.$watch('alert.errorDisplay', function (newVal) {
       if (newVal) {
-        $timeout(function(){
-            $scope.alert = {errorDisplay: false, errorText: '',successDisplay: false, successText: ''};
-          },3000);
+        $timeout(function () {
+          $scope.alert = {errorDisplay: false, errorText: '', successDisplay: false, successText: ''};
+        }, 3000);
       }
     });
 
     $scope.$watch('alert.successDisplay', function (newVal) {
       if (newVal) {
-        $timeout(function(){
-          $scope.alert = {errorDisplay: false, errorText: '',successDisplay: false, successText: ''};
-        },3000);
+        $timeout(function () {
+          $scope.alert = {errorDisplay: false, errorText: '', successDisplay: false, successText: ''};
+        }, 3000);
       }
     });
+
+    $scope.$watch('obj.data', function (newVal) {
+      var url = $window.URL || $window.webkitURL;
+      $scope.obj.fileDownload = url.createObjectURL(new Blob([JSON.stringify(newVal)], {type: 'text/plain'}));
+    });
+
+    $scope.formatTime = function (time) {
+      return moment(time).fromNow();
+    };
+
+    $scope.loadData = function (data, i) {
+      $scope.obj.data = data;
+      $scope.chooseBookmark = i;
+    };
+
+    $scope.onClickSave = function () {
+      if (typeof(Storage) !== "undefined") {
+        var localstorage = getDataLocalStorage();
+        var list = [];
+        if (typeof localstorage.list != "undefined") {
+          list = localstorage.list;
+        }
+        list.push({date: new Date(), data: $scope.obj.data});
+        localstorage.list = list;
+        localStorage.setItem("json_editor_online_tl", JSON.stringify(localstorage));
+        $scope.alert.successDisplay = true;
+        $scope.alert.successText = "Saved!";
+      }
+    };
+
+    $scope.onClickListSave = function () {
+      $scope.toggleWindowBookmark = true;
+    };
+
+    $scope.onClickListCloseSave = function () {
+      $scope.toggleWindowBookmark = false;
+    };
+
+    $scope.getString = function (data) {
+      return JSON.stringify(data);
+    }
+
+
+    function getDataLocalStorage() {
+      if (typeof(Storage) !== "undefined") {
+        var localData = localStorage.getItem("json_editor_online_tl");
+        if (localData) {
+          return JSON.parse(localData);
+        }
+        else {
+          return {
+            list: []
+          }
+        }
+      }
+    }
+
+
   }]);
 
   //    directive
@@ -380,7 +525,7 @@
 
     // do children
     if (xml.hasChildNodes()) {
-      for(var i = 0; i < xml.childNodes.length; i++) {
+      for (var i = 0; i < xml.childNodes.length; i++) {
         var item = xml.childNodes.item(i);
         var nodeName = item.nodeName;
         if (typeof(obj[nodeName]) == "undefined") {
@@ -396,7 +541,8 @@
       }
     }
     return obj;
-  };
+  }
+  ;
 </script>
 </body>
 </html>
