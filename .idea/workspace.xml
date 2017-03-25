@@ -5,8 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index_original.html" afterPath="$PROJECT_DIR$/docs/index_original.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/css/main.min.css" afterPath="$PROJECT_DIR$/docs/css/main_2.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/js/main.min.js" afterPath="$PROJECT_DIR$/docs/js/main_2.min.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +25,8 @@
       <file leaf-file-name="index_original.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/index_original.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="30" column="63" lean-forward="true" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+            <state relative-caret-position="306">
+              <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -38,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/docs/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="2444" lean-forward="false" selection-start-line="0" selection-start-column="2444" selection-end-line="0" selection-end-column="2444" />
+              <caret line="0" column="2667" lean-forward="false" selection-start-line="0" selection-start-column="2667" selection-end-line="0" selection-end-column="2667" />
               <folding />
             </state>
           </provider>
@@ -166,10 +164,10 @@
         <option value="$PROJECT_DIR$/docs/gulpfile.js" />
         <option value="$PROJECT_DIR$/docs/template/window_bookmark.html" />
         <option value="$PROJECT_DIR$/docs/js/main.js" />
-        <option value="$PROJECT_DIR$/docs/index_original.html" />
-        <option value="$PROJECT_DIR$/docs/index.html" />
         <option value="$PROJECT_DIR$/docs/js/main.min.js" />
         <option value="$PROJECT_DIR$/docs/css/main.min.css" />
+        <option value="$PROJECT_DIR$/docs/index_original.html" />
+        <option value="$PROJECT_DIR$/docs/index.html" />
       </list>
     </option>
   </component>
@@ -380,7 +378,7 @@
       <workItem from="1490405797539" duration="2682000" />
       <workItem from="1490414507269" duration="4538000" />
       <workItem from="1490432432546" duration="5100000" />
-      <workItem from="1490450267315" duration="5201000" />
+      <workItem from="1490450267315" duration="5847000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1490345843895</created>
@@ -417,11 +415,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490458368288</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init">
+      <created>1490458477221</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1490458477221</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37806000" />
+    <option name="totallyTimeSpent" value="38452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1370" height="735" extended-state="0" />
@@ -682,8 +687,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/index_original.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="30" column="63" lean-forward="true" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+        <state relative-caret-position="306">
+          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -691,7 +696,7 @@
     <entry file="file://$PROJECT_DIR$/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="2444" lean-forward="false" selection-start-line="0" selection-start-column="2444" selection-end-line="0" selection-end-column="2444" />
+          <caret line="0" column="2667" lean-forward="false" selection-start-line="0" selection-start-column="2667" selection-end-line="0" selection-end-column="2667" />
           <folding />
         </state>
       </provider>
