@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7b80d80-77c1-4b04-9b8c-98bed8b80cc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/template_minify2/content.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/template_minify2/window_bookmark.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/template_minify/content.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/template_minify/window_bookmark.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/css/main.css" afterPath="$PROJECT_DIR$/docs/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/css/main.min.css" afterPath="$PROJECT_DIR$/docs/css/main.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/gulpfile.js" afterPath="$PROJECT_DIR$/docs/gulpfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index_original.html" afterPath="$PROJECT_DIR$/docs/index_original.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/js/main.js" afterPath="$PROJECT_DIR$/docs/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/js/main.min.js" afterPath="$PROJECT_DIR$/docs/js/main.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/template/content.html" afterPath="$PROJECT_DIR$/docs/template/content.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/template/window_bookmark.html" afterPath="$PROJECT_DIR$/docs/template/window_bookmark.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/template_minify/alert.html" afterPath="$PROJECT_DIR$/docs/template_minify2/alert.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/template_minify/footer.html" afterPath="$PROJECT_DIR$/docs/template_minify2/footer.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/template_minify/header.html" afterPath="$PROJECT_DIR$/docs/template_minify2/header.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/css/main.min.css" afterPath="$PROJECT_DIR$/docs/css/main_2.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/js/main.min.js" afterPath="$PROJECT_DIR$/docs/js/main_2.min.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,25 +27,25 @@
       <file leaf-file-name="index_original.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/index_original.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="30" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="7" />
+            <state relative-caret-position="263">
+              <caret line="30" column="63" lean-forward="true" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="2440" lean-forward="false" selection-start-line="0" selection-start-column="2440" selection-end-line="0" selection-end-column="2440" />
+              <caret line="0" column="2444" lean-forward="false" selection-start-line="0" selection-start-column="2444" selection-end-line="0" selection-end-column="2444" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/js/main.min.js">
+      <file leaf-file-name="main_2.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/js/main_2.min.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="5398" lean-forward="false" selection-start-line="0" selection-start-column="5398" selection-end-line="0" selection-end-column="5398" />
@@ -110,21 +98,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/css/main.min.css">
+      <file leaf-file-name="main_2.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/css/main_2.min.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="4113" lean-forward="true" selection-start-line="0" selection-start-column="4113" selection-end-line="0" selection-end-column="4113" />
+              <caret line="0" column="4113" lean-forward="false" selection-start-line="0" selection-start-column="4113" selection-end-line="0" selection-end-column="4113" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="content.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/template_minify2/content.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="599" lean-forward="true" selection-start-line="0" selection-start-column="599" selection-end-line="0" selection-end-column="599" />
               <folding>
                 <element signature="n#style#0;n#ins#0;n#div#2;n#!!top" expanded="true" />
               </folding>
@@ -270,10 +258,6 @@
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main.js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -291,10 +275,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main.css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -400,7 +380,7 @@
       <workItem from="1490405797539" duration="2682000" />
       <workItem from="1490414507269" duration="4538000" />
       <workItem from="1490432432546" duration="5100000" />
-      <workItem from="1490450267315" duration="5087000" />
+      <workItem from="1490450267315" duration="5201000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1490345843895</created>
@@ -430,11 +410,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490452179910</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="init">
+      <created>1490458368288</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1490458368288</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37692000" />
+    <option name="totallyTimeSpent" value="37806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1370" height="735" extended-state="0" />
@@ -651,22 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index_original.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="30" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2440" lean-forward="false" selection-start-line="0" selection-start-column="2440" selection-end-line="0" selection-end-column="2440" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -675,7 +646,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/js/main.min.js">
+    <entry file="file://$PROJECT_DIR$/docs/js/main_2.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="5398" lean-forward="false" selection-start-line="0" selection-start-column="5398" selection-end-line="0" selection-end-column="5398" />
@@ -691,10 +662,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/css/main.min.css">
+    <entry file="file://$PROJECT_DIR$/docs/css/main_2.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="4113" lean-forward="true" selection-start-line="0" selection-start-column="4113" selection-end-line="0" selection-end-column="4113" />
+          <caret line="0" column="4113" lean-forward="false" selection-start-line="0" selection-start-column="4113" selection-end-line="0" selection-end-column="4113" />
           <folding />
         </state>
       </provider>
@@ -702,10 +673,26 @@
     <entry file="file://$PROJECT_DIR$/docs/template_minify2/content.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="599" lean-forward="true" selection-start-line="0" selection-start-column="599" selection-end-line="0" selection-end-column="599" />
           <folding>
             <element signature="n#style#0;n#ins#0;n#div#2;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index_original.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="30" column="63" lean-forward="true" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2444" lean-forward="false" selection-start-line="0" selection-start-column="2444" selection-end-line="0" selection-end-column="2444" />
+          <folding />
         </state>
       </provider>
     </entry>
