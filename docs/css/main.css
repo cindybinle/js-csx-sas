@@ -1,0 +1,300 @@
+body, html {
+    background-image: linear-gradient(to left, #ED4264, #FFEDBC);
+}
+
+nav h3 {
+    color: #ed4867;
+    font-weight: 200;
+    margin-top: -12px;
+}
+
+.container-app {
+    width: calc(100% - 40px);
+    height: calc(100% - 60px);
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    z-index: 0;
+}
+
+.container-app .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.container-app .container header {
+    height: 40px;
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+}
+
+.container-app .container .container-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    border-bottom-right-radius: 30px;
+    border: 1px solid #ccc;
+}
+
+.container-app .content {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    /*justify-content: space-around;*/
+    -ms-flex-line-pack: distribute;
+    /*align-content: space-around;*/
+}
+
+.container-app .content .form-editor {
+    min-width: 35%;
+}
+
+.container-app .content .form-tree {
+    margin-left: 16px;
+    width: calc(65% - 16px);
+}
+
+.container-app .content .resizable {
+    /*flex: 0 0 100%;*/
+}
+
+button {
+    border: 1px solid #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 3px;
+    color: #fff;
+    cursor: pointer;
+    background: white;
+
+}
+
+button b {
+    margin-right: 5px;
+    font-weight: 800;
+}
+
+header button {
+    margin: 7px 0 0 10px;
+}
+
+.btn-upload {
+    border-color: #FF851B;
+    color: #FF851B;
+}
+
+.btn-download {
+    border-color: #2ECC40;
+    color: #2ECC40;
+}
+
+.btn-save {
+    border-color: #0074D9;
+    color: #0074D9;
+}
+
+.btn-delete{
+    border-color: #ed4867;
+    color: #ed4867;
+    margin-left: 50px;
+}
+
+.btn-list-save {
+    border-color: #001f3f;
+    color: #001f3f;
+}
+
+.jsoneditor .jsoneditor-menu {
+    background: #ed4867;
+}
+
+.jsoneditor .jsoneditor-menu .jsoneditor-poweredBy {
+    display: none;
+}
+
+div.jsoneditor {
+    border-color: #ed4867;
+}
+
+/* css upload*/
+.custom-file-input {
+    margin-left: 10px;
+    color: transparent;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    content: 'Import json file';
+    color: #FF851B;
+    display: inline-block;
+    border: 1px solid #FF851B;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+}
+
+.custom-file-input:hover::before {
+    border-color: black;
+}
+
+.custom-file-input:active {
+    outline: 0;
+}
+
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+body {
+    padding: 20px;
+}
+
+/*css up;pad*/
+
+footer {
+    text-align: center;
+    font-weight: 200;
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    color: #ed4867;
+}
+
+footer a {
+    color: #ed4867;
+    text-decoration: none;
+}
+
+.alert-error {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    padding: 10px;
+    height: 30px;
+    line-height: 30px;
+    background: #fcdae0;
+    color: #ed4867;
+    border: 2px solid #ed4867;
+    z-index: 9999;
+    border-radius: 7px;
+    box-shadow: 3px 4px 5px #987878;
+    font-weight: 600;
+}
+
+.alert-success {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    padding: 10px;
+    height: 30px;
+    line-height: 30px;
+    background: #d7f5f5;
+    color: #3D9970;
+    border: 2px solid #3D9970;
+    z-index: 9999;
+    border-radius: 7px;
+    font-weight: 600;
+    box-shadow: 3px 4px 5px #987878;
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+}
+
+#window-bookmark {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: white;
+    box-shadow: -10px 0px 10px 1px #fffafa;
+}
+
+#window-bookmark .window-bookmark-container {
+    position: relative;
+}
+
+#window-bookmark .window-bookmark-container .close-button {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    color: #ed4867;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#window-bookmark .window-bookmark-container h3{
+    color:#ed4867;
+    margin-left: 20px;
+}
+
+#window-bookmark .window-bookmark-container ul {
+    overflow: auto;
+    list-style-type: decimal;
+}
+
+#window-bookmark .window-bookmark-container ul li {
+    padding: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+#window-bookmark .window-bookmark-container ul li:hover {
+    color: #ed4867;
+}
