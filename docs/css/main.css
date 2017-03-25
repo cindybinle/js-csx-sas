@@ -27,7 +27,6 @@ nav h3 {
 .container-app .container header {
     height: 40px;
     width: 100%;
-    border-bottom: 2px solid #ccc;
 }
 
 .container-app .container .container-bg {
@@ -58,13 +57,19 @@ nav h3 {
 }
 
 .container-app .content .form-editor {
-    min-width: 35%;
+    min-width: 25%;
 }
 
 .container-app .content .form-tree {
     margin-left: 16px;
-    width: calc(65% - 16px);
+    width: calc(75% - 316px);
 }
+
+.container-appn .content .ads{
+    background: #ccc;
+    min-width: 300px;
+}
+
 
 .container-app .content .resizable {
     /*flex: 0 0 100%;*/
@@ -299,6 +304,7 @@ footer a {
     color: #ed4867;
 }
 
+
 @media(max-width: 769px){
 
     nav h3{
@@ -352,6 +358,9 @@ footer a {
     }
     #window-bookmark{
         width: 90%;
+    }
+    .container-app .content .ads{
+        display: none;
     }
 
 }

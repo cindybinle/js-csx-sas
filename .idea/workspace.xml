@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7b80d80-77c1-4b04-9b8c-98bed8b80cc6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/template_minify2/content.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/template_minify2/window_bookmark.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/template_minify/content.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/template_minify/window_bookmark.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/css/main.css" afterPath="$PROJECT_DIR$/docs/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/css/main.min.css" afterPath="$PROJECT_DIR$/docs/css/main.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/gulpfile.js" afterPath="$PROJECT_DIR$/docs/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index_original.html" afterPath="$PROJECT_DIR$/docs/index_original.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/js/main.js" afterPath="$PROJECT_DIR$/docs/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/js/main.min.js" afterPath="$PROJECT_DIR$/docs/js/main.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/template/content.html" afterPath="$PROJECT_DIR$/docs/template/content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/template/window_bookmark.html" afterPath="$PROJECT_DIR$/docs/template/window_bookmark.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/template_minify/alert.html" afterPath="$PROJECT_DIR$/docs/template_minify2/alert.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/template_minify/footer.html" afterPath="$PROJECT_DIR$/docs/template_minify2/footer.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/template_minify/header.html" afterPath="$PROJECT_DIR$/docs/template_minify2/header.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index_original.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index_original.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/index_original.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+            <state relative-caret-position="249">
+              <caret line="30" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -38,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/docs/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="2435" lean-forward="false" selection-start-line="0" selection-start-column="2435" selection-end-line="0" selection-end-column="2435" />
+              <caret line="0" column="2440" lean-forward="false" selection-start-line="0" selection-start-column="2440" selection-end-line="0" selection-end-column="2440" />
               <folding />
             </state>
           </provider>
@@ -48,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/docs/js/main.min.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="5343" lean-forward="false" selection-start-line="0" selection-start-column="5343" selection-end-line="0" selection-end-column="5343" />
+              <caret line="0" column="5398" lean-forward="false" selection-start-line="0" selection-start-column="5398" selection-end-line="0" selection-end-column="5398" />
               <folding />
             </state>
           </provider>
@@ -57,8 +69,42 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="322" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="356" selection-end-column="1" />
+            <state relative-caret-position="170">
+              <caret line="55" column="29" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="365" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/template/content.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="18" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#ins#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="window_bookmark.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/template/window_bookmark.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+              <folding>
+                <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -68,8 +114,20 @@
         <entry file="file://$PROJECT_DIR$/docs/css/main.min.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="4161" lean-forward="false" selection-start-line="0" selection-start-column="4161" selection-end-line="0" selection-end-column="4161" />
+              <caret line="0" column="4113" lean-forward="true" selection-start-line="0" selection-start-column="4113" selection-end-line="0" selection-end-column="4113" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/template_minify2/content.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#ins#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,8 +135,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="142" column="27" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="351" selection-end-column="1" />
+            <state relative-caret-position="187">
+              <caret line="131" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="355" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -89,18 +147,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>on</find>
-      <find>template</find>
       <find>main.css</find>
       <find>35</find>
+      <find>template</find>
+      <find>template_minify</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,19 +168,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/gulpfile.js" />
         <option value="$PROJECT_DIR$/docs/template/alert.html" />
         <option value="$PROJECT_DIR$/docs/template/footer.html" />
         <option value="$PROJECT_DIR$/docs/template/header.html" />
-        <option value="$PROJECT_DIR$/docs/template/content.html" />
-        <option value="$PROJECT_DIR$/docs/template/window_bookmark.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/docs/index_original.html" />
+        <option value="$PROJECT_DIR$/docs/template_minify/ads.html" />
         <option value="$PROJECT_DIR$/docs/css/main.css" />
+        <option value="$PROJECT_DIR$/docs/template/content.html" />
+        <option value="$PROJECT_DIR$/docs/gulpfile.js" />
+        <option value="$PROJECT_DIR$/docs/template/window_bookmark.html" />
         <option value="$PROJECT_DIR$/docs/js/main.js" />
-        <option value="$PROJECT_DIR$/docs/css/main.min.css" />
-        <option value="$PROJECT_DIR$/docs/js/main.min.js" />
+        <option value="$PROJECT_DIR$/docs/index_original.html" />
         <option value="$PROJECT_DIR$/docs/index.html" />
+        <option value="$PROJECT_DIR$/docs/js/main.min.js" />
+        <option value="$PROJECT_DIR$/docs/css/main.min.css" />
       </list>
     </option>
   </component>
@@ -189,11 +249,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="template_minify2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js-csx-sas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js-csx-sas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main.js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js-csx-sas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js-csx-sas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main.css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,7 +400,7 @@
       <workItem from="1490405797539" duration="2682000" />
       <workItem from="1490414507269" duration="4538000" />
       <workItem from="1490432432546" duration="5100000" />
-      <workItem from="1490450267315" duration="1894000" />
+      <workItem from="1490450267315" duration="5087000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1490345843895</created>
@@ -323,11 +423,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490436956561</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="init">
+      <created>1490452179910</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1490452179910</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34499000" />
+    <option name="totallyTimeSpent" value="37692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1370" height="735" extended-state="0" />
@@ -339,7 +446,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.021594685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10631229" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -367,6 +474,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/docs/bower_components/angular/angular.js" />
+    <entry file="file://$PROJECT_DIR$/docs/bower_components/ng-jsoneditor/bower.json" />
+    <entry file="file://$PROJECT_DIR$/docs/bower_components/ng-jsoneditor/ng-jsoneditor.js" />
+    <entry file="file://$PROJECT_DIR$/docs/package.json" />
+    <entry file="file://$PROJECT_DIR$/docs/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/index_original.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -384,26 +503,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index_original.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/bower_components/jsoneditor/package.json" />
-    <entry file="file://$PROJECT_DIR$/docs/bower_components/angular/angular.js" />
-    <entry file="file://$PROJECT_DIR$/docs/bower_components/ng-jsoneditor/bower.json" />
-    <entry file="file://$PROJECT_DIR$/docs/bower_components/ng-jsoneditor/ng-jsoneditor.js" />
-    <entry file="file://$PROJECT_DIR$/docs/package.json" />
-    <entry file="file://$PROJECT_DIR$/docs/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -422,6 +522,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -439,6 +540,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -455,6 +557,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -488,30 +591,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/template/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/bower_components/jsoneditor/dist/jsoneditor.js" />
     <entry file="file://$PROJECT_DIR$/docs/bower_components/ng-jsoneditor/ng-jsoneditor.js" />
-    <entry file="file://$PROJECT_DIR$/docs/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/template_minify/alert.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/template_minify/content.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -525,41 +607,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/template_minify/ads.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/template_minify/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/template/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#ins#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/template/window_bookmark.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state relative-caret-position="170">
+          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/css/main.css">
+    <entry file="file://$PROJECT_DIR$/docs/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="322" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="356" selection-end-column="1" />
+        <state relative-caret-position="102">
+          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/css/main.min.css">
+    <entry file="file://$PROJECT_DIR$/docs/index_original.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4161" lean-forward="false" selection-start-line="0" selection-start-column="4161" selection-end-line="0" selection-end-column="4161" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="142" column="27" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="351" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/js/main.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5343" lean-forward="false" selection-start-line="0" selection-start-column="5343" selection-end-line="0" selection-end-column="5343" />
+        <state relative-caret-position="249">
+          <caret line="30" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -567,16 +662,50 @@
     <entry file="file://$PROJECT_DIR$/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="2435" lean-forward="false" selection-start-line="0" selection-start-column="2435" selection-end-line="0" selection-end-column="2435" />
+          <caret line="0" column="2440" lean-forward="false" selection-start-line="0" selection-start-column="2440" selection-end-line="0" selection-end-column="2440" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index_original.html">
+    <entry file="file://$PROJECT_DIR$/docs/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+        <state relative-caret-position="187">
+          <caret line="131" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="355" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/js/main.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5398" lean-forward="false" selection-start-line="0" selection-start-column="5398" selection-end-line="0" selection-end-column="5398" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="55" column="29" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="365" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/css/main.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4113" lean-forward="true" selection-start-line="0" selection-start-column="4113" selection-end-line="0" selection-end-column="4113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/template_minify2/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#ins#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

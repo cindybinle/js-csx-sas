@@ -124,8 +124,12 @@ Module.config(['$compileProvider', function ($compileProvider) {
 
 Module.controller('controller', ['$scope', '$timeout', '$window', function ($scope, $timeout, $window) {
   var today = new Date();
+  var dataJson= json;
+  if((getDataLocalStorage().list).length > 0){
+    dataJson=getDataLocalStorage().list[(getDataLocalStorage().list).length -1]
+  }
   $scope.obj = {
-    data: json,
+    data: dataJson,
     options: {mode: 'code'},
     listChecked: [],
     file: null,
