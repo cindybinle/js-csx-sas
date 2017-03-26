@@ -4,7 +4,7 @@ var htmlmin = require('gulp-htmlmin');
 gulp.task('minify', function() {
   return gulp.src('template/*.html')
     .pipe(htmlmin({collapseWhitespace: true,removeComments: true}))
-    .pipe(gulp.dest('template_minify2'));
+    .pipe(gulp.dest('template_minify3'));
 });
 
 gulp.task('default', ['minify']);
