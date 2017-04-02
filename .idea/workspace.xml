@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7b80d80-77c1-4b04-9b8c-98bed8b80cc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/css/main_3.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/template/donate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/template_minify3/content.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/template_minify3/donate.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/css/main_2.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/template_minify2/content.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/googlea13c936fb2e14366.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/css/main.css" afterPath="$PROJECT_DIR$/docs/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/gulpfile.js" afterPath="$PROJECT_DIR$/docs/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index_original.html" afterPath="$PROJECT_DIR$/docs/index_original.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/template/content.html" afterPath="$PROJECT_DIR$/docs/template/content.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/template/header.html" afterPath="$PROJECT_DIR$/docs/template/header.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/js/main_2.min.js" afterPath="$PROJECT_DIR$/docs/js/main_3.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/template_minify2/alert.html" afterPath="$PROJECT_DIR$/docs/template_minify3/alert.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/template_minify2/footer.html" afterPath="$PROJECT_DIR$/docs/template_minify3/footer.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/template_minify2/header.html" afterPath="$PROJECT_DIR$/docs/template_minify3/header.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/template_minify2/window_bookmark.html" afterPath="$PROJECT_DIR$/docs/template_minify3/window_bookmark.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,7 +24,7 @@
       <file leaf-file-name="index_original.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/index_original.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
+            <state relative-caret-position="680">
               <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
               <folding />
             </state>
@@ -69,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="donate.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="donate.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/template/donate.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -102,7 +86,7 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
+            <state relative-caret-position="5389">
               <caret line="317" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="378" selection-end-column="1" />
               <folding />
             </state>
@@ -113,13 +97,13 @@
         <entry file="file://$PROJECT_DIR$/docs/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="content.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/template/content.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -218,6 +202,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -273,12 +258,11 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../stec_sctm_system_private" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="js.eslint.eslintPackage" value="C:\Users\thuan\AppData\Roaming\npm\node_modules\eslint" />
@@ -375,7 +359,9 @@
       <workItem from="1490414507269" duration="4538000" />
       <workItem from="1490432432546" duration="5100000" />
       <workItem from="1490450267315" duration="5847000" />
-      <workItem from="1490500477651" duration="2372000" />
+      <workItem from="1490500477651" duration="2979000" />
+      <workItem from="1490540111861" duration="37000" />
+      <workItem from="1491136005243" duration="72000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1490345843895</created>
@@ -419,11 +405,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490458477221</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="init">
+      <created>1490513528398</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1490513528398</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40824000" />
+    <option name="totallyTimeSpent" value="41540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1370" height="735" extended-state="0" />
@@ -574,9 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -584,7 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2227">
           <caret line="131" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="355" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -596,22 +585,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/template_minify2/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="599" lean-forward="false" selection-start-line="0" selection-start-column="599" selection-end-line="0" selection-end-column="599" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/template/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/template_minify2/content.html" />
     <entry file="file://$PROJECT_DIR$/docs/template/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -622,7 +596,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
+        <state relative-caret-position="5389">
           <caret line="317" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="378" selection-end-column="1" />
           <folding />
         </state>
@@ -639,14 +613,14 @@
     <entry file="file://$PROJECT_DIR$/docs/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/index_original.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
+        <state relative-caret-position="680">
           <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
           <folding />
         </state>
@@ -674,6 +648,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/template/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
